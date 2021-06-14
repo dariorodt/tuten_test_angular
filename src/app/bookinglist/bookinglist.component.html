@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <td>Booking ID</td>
+            <td >Cliente</td>
+            <td>Fecha de creación</td>
+            <td>Dirección</td>
+            <td>Precio</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of bookingsToShow">
+            <td>{{b.bookingId}}</td>
+            <td>{{firstName}} {{lastName}}</td>
+            <td>{{b.bookingTime | date}}</td>
+            <td>{{b.locationId.streetAddress}}</td>
+            <td>{{b.bookingPrice | currency}}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </div>
+</div>
